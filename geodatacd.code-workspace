@@ -1,0 +1,19 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "../geodata"
+        },
+        {
+            "path": "../mapbox"
+        },
+        {
+            "path": "../portfolio"
+        }
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "geodatacd"
+    }
+}
