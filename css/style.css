@@ -8,11 +8,23 @@ body {
     background-color: rgb(223, 211, 211);
 }
 
-header {
+.entete {
+    display: flex;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    background: linear-gradient(to right, #6c99c7d2, #dd2b13d2);
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+
+.logo img {
+    width: 180px;
     transition: 0.6s;
     -webkit-transition: 0.6s;
     -moz-transition: 0.6s;
@@ -20,20 +32,10 @@ header {
     -o-transition: 0.6s;
 }
 
-nav {
-    height: 60px;
-}
-
-.entete {
+.menu ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #6c99c7d2, #dd2b13d2);
-}
-
-.logo img {
-    display: block;
-    width: 180px;
 }
 
 .menu a {
@@ -64,8 +66,29 @@ nav {
     margin: 0px 70px;
 }
 
-.toggle {
-    display: none;
+.porfolio {
+    width: 800px;
+    height: 400px;
+    background: url(../porfolio/image1.jpg);
+    background-repeat: no-repeat;
+    margin: 30px 80px 0px 80px;
+    animation: porfolio 15s infinite;
+    -webkit-animation: porfolio 15s infinite;
+}
+
+@keyframes porfolio {
+    25% {
+        background: url(../porfolio/image2.jpg);
+        background-repeat: no-repeat;
+    }
+    50% {
+        background: url(../porfolio/image3.jpg);
+        background-repeat: no-repeat;
+    }
+    75% {
+        background: url(../porfolio/image4.jpg);
+        background-repeat: no-repeat;
+    }
 }
 
 .accueil {
@@ -76,10 +99,31 @@ nav {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-image: url("../images/bckgr.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../imgAccueil/bkg2.jpg");
     background-size: cover;
-    color: rgba(255, 255, 255)
+    color: rgba(255, 255, 255);
+    animation: accueil 15s infinite;
+    -webkit-animation: accueil 10s infinite;
+    background-size: cover;
+}
+
+@keyframes accueil {
+    20% {
+        background: url(../imgAccueil/bkg1.jpg);
+        background-size: cover;
+    }
+    40% {
+        background: url(../imgAccueil/bkg3.jpg);
+        background-size: cover;
+    }
+    60% {
+        background: url(../imgAccueil/bkg4.jpg);
+        background-size: cover;
+    }
+    80% {
+        background: url(../imgAccueil/bkg5.jpg);
+        background-size: cover;
+    }
 }
 
 .accueil h1 {
@@ -92,7 +136,7 @@ nav {
     text-align: center;
 }
 
-.reveal {
+[class*="reveal-"] {
     opacity: 0;
     transform: translateY(30px);
     -webkit-transform: translateY(30px);
@@ -113,6 +157,18 @@ nav {
     -moz-transition: 1s cubic-bezier(.1, 0, 0, 1);
     -ms-transition: 1s cubic-bezier(.1, 0, 0, 1);
     -o-transition: 1s cubic-bezier(.1, 0, 0, 1);
+}
+
+.reveal-2 {
+    transition-delay: .2s;
+}
+
+.reveal-3 {
+    transition-delay: .4s;
+}
+
+.reveal-4 {
+    transition-delay: .6s;
 }
 
 .container {
@@ -143,7 +199,7 @@ nav {
 }
 
 .profil img {
-    width: 150px;
+    width: 100px;
     margin-bottom: 30px;
     border-radius: 100px;
     -webkit-border-radius: 100px;
@@ -184,6 +240,18 @@ nav {
 
 .contact img {
     width: 20px;
+}
+
+.maps {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 0px;
+    width: 800px
+}
+
+.contact p {
+    margin-top: 15px;
 }
 
 @media screen and (max-width:800px) {}
